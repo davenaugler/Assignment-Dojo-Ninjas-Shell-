@@ -1,0 +1,137 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww21400\viewh20420\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs48 \cf0 \ul \ulc0 Assignment: Dojo & Ninjas (Shell)\
+
+\fs28 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b \ul Query: Create 3 new dojos
+\f0\b0 \ulnone \
+Dojo.objects.create(name="Coding Dojo", city="Arlington", state="VA")\
+Dojo.objects.create(name="Coding Dojo", city="Boise", state="ID")\
+Dojo.objects.create(name="Coding Dojo", city="Chicago", state="IL")\
+\
+
+\f1\b \ul Query: Delete the 3 dojos you created
+\f0\b0 \ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 d = Dojo.objects.get(id=1)\
+  d.delete()\
+d = Dojo.objects.get(id=2)\
+  d.delete()\
+d = Dojo.objects.get(id=3)\
+  d.delete()\
+d = Dojo.objects.get(id=4)\
+  d.delete()\
+d = Dojo.objects.get(id=5)\
+  d.delete()\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b \ul Query: Create 3 more dojos
+\f0\b0 \ulnone \
+Dojo.objects.create(name="Coding Dojo", city="Tulsa", state="OK")\
+Dojo.objects.create(name="Coding Dojo", city="Silicon Valley", state="CA")\
+Dojo.objects.create(name="Coding Dojo\'94, city="Boise", state="ID")\
+\
+
+\f1\b \ul Query: Create 3 ninjas that belong to the first dojo
+\f0\b0 \ulnone \
+dojo_6 = Dojo.objects.get(id=6)\
+  Ninja.objects.create(dojo=dojo_6, first_name="Jordan", last_name="Michaels")\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0   Ninja.objects.create(dojo=dojo_6, first_name=\'93Lauren\'94, last_name="Michaels")\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0   Ninja.objects.create(dojo=dojo_6, first_name=\'93Seth\'94, last_name="Myeres\'94)\
+\
+
+\f1\b \ul Query: Create 3 ninjas that belong to the second dojo
+\f0\b0 \ulnone \
+dojo_7 = Dojo.objects.get(id=7)\
+  Ninja.objects.create(dojo=dojo_7, first_name="Jackson", last_name="Gaines")\
+  Ninja.objects.create(dojo=dojo_7, first_name="Ronald", last_name="Renolds") \
+  Ninja.objects.create(dojo=dojo_7, first_name="Wes", last_name="Bergmann")\
+  Ninja.objects.create(dojo=dojo_7, first_name="Turbo", last_name="Camkiran")\
+  Ninja.objects.create(dojo=dojo_7, first_name="Theo", last_name="Campbell")\
+  Ninja.objects.create(dojo=dojo_7, first_name="Hunter", last_name="Barfield")\
+\
+
+\f1\b \ul Query: Create 3 ninjas that belong to the third dojo
+\f0\b0 \ulnone \
+Dojo.objects.get(id=8)\
+  Ninja.objects.create(dojo=dojo_8, first_name="Dave", last_name="Naugler")\
+  Ninja.objects.create(dojo=dojo_8, first_name="Jac", last_name="Casper")\
+  Ninja.objects.create(dojo=dojo_8, first_name="Logan", last_name="Salisbury")\
+  Ninja.objects.create(dojo=dojo_8, first_name="Zach", last_name="Nichols")\
+\
+
+\f1\b \ul Query: Retrieve all the ninjas from the first dojo
+\f0\b0 \ulnone \
+some_ninjas = Ninja.objects.filter(dojo=Dojo.objects.get(id=6))\
+  some_ninjas.all()\
+\
+
+\f1\b \ul Query: Retrieve all the ninjas from the last dojo
+\f0\b0 \ulnone \
+n8 = Ninja.objects.filter(dojo=Dojo.objects.get(id=8))\
+  n8.all()\
+\
+
+\f1\b \ul Query: Retrieve the last ninja\'92s dojo
+\f0\b0 \ulnone \
+n8[3].dojo.name\
+\
+
+\f1\b \ul Add a new text field called \'93desc\'94 to your Dojo class
+\f0\b0 \ulnone \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Screen Shot 2019-09-14 at 5.19.12 PM.png \width20780 \height8940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\fs28 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b \ul Create and run the migration files to update the table in your database. If needed, provide a default value \'93old dojo\'94
+\f0\b0 \ulnone \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Screen Shot 2019-09-14 at 5.22.02 PM.png \width30440 \height14900 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f1\b \ul Query: Create a new dojo
+\f0\b0 \ulnone \
+Dojo.objects.create(name="Coding Dojo", city="Houston", state="TX")\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
